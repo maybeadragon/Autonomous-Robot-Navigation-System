@@ -1,4 +1,4 @@
-# Autonomous-Robot-Navigation-System
+# Autonomous Robot Navigation System
 
 The objective of this project is to implement autonomous navigation systems with limited hardware resources while still maintaining real-time decision making and accuracy. The code runs on a GoPiGo3 robot with a Model 4B Raspberry Pi with 4GB RAM for processing instructions. 
 
