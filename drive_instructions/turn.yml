@@ -1,0 +1,4 @@
+steps:
+  - forward: 20
+  - turn: 90
+  - forward: 10

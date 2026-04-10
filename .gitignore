@@ -1,0 +1,6 @@
+.\stop_sign_detection\results
+.\__pycache__
+.\gopigo
+*.pyc
+/gopigo
+/stop_sign_detection/results
