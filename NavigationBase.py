@@ -1,5 +1,5 @@
 import cv2
-from NavigationError import NavigationError
+from AccidentError import AccidentError
 class NavigationBase:
     def __init__(self,robot,camera=None):
         self.robot = robot

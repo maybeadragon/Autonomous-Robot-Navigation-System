@@ -4,3 +4,4 @@
 *.pyc
 /gopigo
 /stop_sign_detection/results
+trial_config.yml
