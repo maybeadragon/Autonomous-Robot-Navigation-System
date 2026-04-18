@@ -1,5 +1,5 @@
 nav_system: None
-camera_ip: Nonr
+camera_ip: None
 n_trials: 100
 last_trial: 0
 drive_instructions: ""
