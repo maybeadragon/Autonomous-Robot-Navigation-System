@@ -19,4 +19,5 @@ def check_right(nav_base):
     #    nav_base.speed_up()
     nav_base.servo.rotate_servo(80)
 def run_navigation(nav_base):
-    return
+    check_right(nav_base)
+    check_left(nav_base)

@@ -1,6 +1,6 @@
-nav_system: None
+nav_system: distance
 camera_ip: None
 n_trials: 100
 last_trial: 0
-drive_instructions: "Autonomous-Robot-Navigation-System\\drive_instructions\\straight.yml"
-save_directory: "Autonomous-Robot-Navigation-System\\test_collection"
+drive_instructions: "drive_instructions/straight.yml"
+save_directory: "test_collection"
