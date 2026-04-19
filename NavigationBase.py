@@ -16,7 +16,7 @@ class NavigationBase:
         return self.distance_sensor.read_inches()
     def emergency_stop(self):
         dist_to_stop = self.robot.get_speed() * (self.wheel_circumference/360)
-        if self.distance_sensor.read_inches() < (dist_to_stop*0.75):
+        if self.distance_sensor.read_inches() < (dist_to_stop*0.25):
             self.robot.stop()
             raise AccidentError("Emergency stop performed.")
     def stop(self,dist_to_stop):
