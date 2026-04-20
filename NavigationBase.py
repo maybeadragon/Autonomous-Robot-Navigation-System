@@ -17,12 +17,15 @@ class NavigationBase:
         self.dist_left = 0
         self.robot.steer(100,100)
         self.robot.set_speed(300)
+        self.obstacle_count = 0
+        self.accidents = 0
     def check_distance(self):
         return self.distance_sensor.read_inches()
     def emergency_stop(self):
         dist_to_stop = self.robot.get_speed() * (self.wheel_circumference/360)
         if self.check_distance() < (dist_to_stop*0.25):
             self.robot.stop()
+            self.accidents += 1
             raise AccidentError("Emergency stop performed.")
     def stop(self,dist_to_stop=0):
         #curr_speed = self.robot.get_speed()

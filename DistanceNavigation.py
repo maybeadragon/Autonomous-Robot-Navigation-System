@@ -7,19 +7,30 @@ class DistanceNavigation(NavigationBase):
         self.slowing = False
         self.left = False
         self.right = False
+        self.obstacle = False
     def check_ahead(self):
         if self.check_distance() <= self.robot_length*2:
+            if not self.obstacle:
+                self.obstacle = True
+                self.obstacle_count += 1
             self.slow_down()
             self.slowing = True
-        if self.check_distance() <= self.robot_length*2:
+        if self.check_distance() <= self.robot_length:
+            if not self.obstacle:
+                self.obstacle = True
+                self.obstacle_count += 1
             self.stop(self.check_distance())
             self.slowing = True
         if self.check_distance() > self.robot_length*2 and self.robot.get_speed() < 300:
+            if self.obstacle: self.obstacle = False
             self.speed_up()
             self.slowing = False
     def check_right(self):
         self.servo.rotate_servo(50)
         if self.check_distance() < self.robot_length*0.5:
+            if not self.obstacle:
+                self.obstacle = True
+                self.obstacle_count += 1
             self.shift_left()
             self.left = True
         self.left = False
@@ -27,6 +38,9 @@ class DistanceNavigation(NavigationBase):
     def check_left(self):
         self.servo.rotate_servo(100)
         if self.check_distance() < self.robot_length*0.5:
+            if not self.obstacle:
+                self.obstacle = True
+                self.obstacle_count += 1
             self.shift_right()
             self.right = True
         self.right = False
@@ -48,4 +62,5 @@ class DistanceNavigation(NavigationBase):
                 time.sleep(0.01)
         self.servo.rotate_servo(85)
         self.robot.set_speed(speed)
+
     
