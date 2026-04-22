@@ -26,7 +26,7 @@ class DistanceNavigation(NavigationBase):
             self.speed_up()
             self.slowing = False
     def check_right(self):
-        self.servo.rotate_servo(50)
+        self.servo.rotate_servo(60)
         if self.check_distance() < self.robot_length*0.5:
             if not self.obstacle:
                 self.obstacle = True

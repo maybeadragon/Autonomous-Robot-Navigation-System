@@ -1,0 +1,5 @@
+accidents: 0
+distance_traveled: 49.213156
+env: base
+nav_type: distance
+obstacles_encountered: 0

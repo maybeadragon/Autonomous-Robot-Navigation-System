@@ -1,6 +1,6 @@
 camera_ip: None
 drive_instructions: drive_instructions/straight.yml
-last_trial: 0
+last_trial: 100
 n_trials: 100
 nav_system: distance
 save_directory: test_collection
