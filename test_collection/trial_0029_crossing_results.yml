@@ -1,0 +1,5 @@
+accidents: 1
+distance_traveled: 26.525754
+env: crossing
+nav_type: distance
+obstacles_encountered: 1
